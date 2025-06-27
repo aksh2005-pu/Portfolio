@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aksh Mistry | Portfolio</title>
+
+  <!-- Style sheet link -->
+  <link rel="stylesheet" href="portfoliostyle.css" />
+
+  <!-- Might need to add favicon later -->
+</head>
+<body>
+
+  <!-- ===== Header Section ===== -->
+  <header class="hero-header">
+    <h1>Aksh Mistry</h1>
+    <p>Web Developer & Data Analyst (still learning!)</p> <!-- Added a touch of humility -->
+  </header>
+
+  <!-- Theme Toggle (still basic for now) -->
+  <div class="theme-toggle-container">
+    <button id="modeToggle" class="btn">🌞 Light Mode</button>
+  </div>
+
+  <!-- ===== About Me ===== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="profile.jpg.jpg" alt="Aksh Mistry" />
+      <p>
+        Hey there! I'm currently studying Computer Science Engineering and having fun experimenting with building stuff online. 
+        I’m super into front-end dev, and recently got into playing around with data — it’s kind of addicting figuring out what patterns hide in there.
+        <br><br>
+        Depending on the day, I’m either writing Python scripts or Java code (mood dependent 😄). 
+        Also working with things like React, SQL, and Pandas — and I’ve been dabbling in Power BI recently (very underrated tool!).
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Skills Section ===== -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><strong>Languages:</strong> Python, Java, JavaScript</div>
+      <div class="skill-card"><strong>Frontend:</strong> HTML, CSS, React</div>
+      <div class="skill-card"><strong>Backend/Tools:</strong> Node.js, Git, REST APIs, GitHub</div>
+      <div class="skill-card"><strong>Data Stuff:</strong> Pandas, NumPy, SQL, Power BI, Matplotlib</div>
+      <div class="skill-card"><strong>Other Tools:</strong> VS Code, Excel, Jupyter Notebook</div>
+      <div class="skill-card"><strong>Soft Skills:</strong> Communication, Teamwork, and fixing bugs while half-asleep 😅</div> <!-- Little joke -->
+    </div>
+  </section>
+
+  <!-- ===== Projects Section ===== -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <!-- Just showcasing one for now -->
+    <div class="project">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+        
+        <!-- Project Image + Caption -->
+        <div style="flex: 1; text-align: center;">
+          <img src="CALCULATORSAMPLE.png" 
+               alt="Screenshot of my calculator project" 
+               style="max-width: 250px; height: auto; border-radius: 8px; border: 1px solid #ccc;" />
+          <p style="margin-top: 10px; font-weight: bold;">SCIENTIFIC CALCULATOR</p>
+          <p style="font-size: 0.95em; color: #666; margin-top: -5px;">
+            This one was built to test out logic-heavy front-end code. Try it out via the link below.
+          </p>
+        </div>
+
+        <!-- View Project Button -->
+        <div style="flex: 1; text-align: center;">
+          <!-- FYI: Opens in a new tab -->
+          <a href="index.html" target="_blank" class="btn">View Project</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Resume Link ===== -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>
+      <a href="https://drive.google.com/file/d/1EX_oNiqlhwqc-v-mB6HlYro7J0Yakmc6/view?usp=drive_link" 
+         target="_blank" class="btn">
+         Download Resume
+      </a>
+    </p>
+  </section>
+
+  <!-- ===== Contact Info ===== -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you're working on something cool, let's connect! 😊</p>
+    <p>Email: <a href="mailto:2303031050034@gmail.com">2303031050034@gmail.com</a></p>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 Aksh Mistry. All rights reserved.</p>
+  </footer>
+
+  <!-- ===== Light/Dark Theme Toggle Script ===== -->
+  <script>
+    const toggleBtn = document.getElementById('modeToggle');
+
+    // Updates button text based on the current theme
+    function updateThemeLabel() {
+      if (document.body.classList.contains('dark-mode')) {
+        toggleBtn.textContent = "🌙 Dark Mode";
+      } else {
+        toggleBtn.textContent = "🌞 Light Mode";
+      }
+    }
+
+    // Attach click event
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      updateThemeLabel(); // Update button after toggling
+    });
+
+    // Just in case the theme was already active
+    updateThemeLabel();
+  </script>
+
+</body>
+</html>
